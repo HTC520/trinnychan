@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html style="font-size: 85.3333px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="applicable-device" content="mobile">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>相遇计时器</title>
+    <center>
+        <style>
+
+            .timebox2 div,timebox2 span,timebox2 div span{color: #EC87C0 !important;}
+            .timebox2 .timecounter span{color: #BDBDBD !important;}
+            .timetext{width: 100%;text-align: center;}
+            .timetexttitle{font-size:0.3rem;margin-bottom: 15px;color: #ED5655;}
+            .timetextintro{font-size: 0.22rem;margin-bottom: 15px;color: #AC58FA;padding: 0 1.52rem;box-sizing: border-box;}
+            .timecounter{font-size: 0.6rem;}
+            .txt{padding: 0 0.2rem;box-sizing:border-box;}
+            .clearbg5{display: block;clear: both;width: 100%;height: 0.16rem;overflow: hidden;background-color: #eee;}
+            .txt p{line-height: 30px;margin-top: 0.2rem;}
+            .txt p img{width: 100%;}
+            .timecounter span{color: #fff;}
+        </style>
+
+<body>
+<br/>
+<div class="timebox2">
+    <div class="timetext">
+        <div class="timetexttitle">相遇计时器</div>
+        <div class="timetextintro">相遇时间：2019年12月22日 农历冬月月廿七 冬至 <br/>星期日</div>
+        <div class="timetextintro">目前已经认识<br/></div>
+        <div class="timecounter">
+            <span id="t_d">0 天</span>
+            <span id="t_h">10 时</span>
+            <span id="t_m">24 分</span>
+            <br/>
+            <span id="t_s">8 秒</span>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    function getRTime() {
+        var StartTime = new Date("2019/12/22 01:38:00"); //开始时间
+        var NowTime = new Date();
+        var t = NowTime.getTime() - StartTime;
+        var d = Math.floor(t / 1000 / 60 / 60 / 24);
+        var h = Math.floor(t / 1000 / 60 / 60 % 24);
+        var m = Math.floor(t / 1000 / 60 % 60);
+        var s = Math.floor(t / 1000 % 60);
+
+        document.getElementById("t_d").innerHTML = d + " 天";
+        document.getElementById("t_h").innerHTML = h + " 时";
+        document.getElementById("t_m").innerHTML = m + " 分";
+        document.getElementById("t_s").innerHTML = s + " 秒";
+    }
+    setInterval(getRTime, 1000);
+</script>
+</div>
+</center>
+<body style="background:url(http://p15.qhimg.com/bdr/__85/t0185f0f7750ea427e0.jpg);">
+
+</body>
+</html>
